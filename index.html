@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <!--Faz a interface se adaptar a diferentes tamanhos de tela-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DILUTE LAB - Calculadora de Diluição</title>
+
+    <!--CSS da aplicação-->
+    <link rel="stylesheet" href="src/styles/style.css">
+
+</head>
+
+<body>
+
+    <!--Cabeçalho da aplicação-->
+    <header class="cabecalho">
+        <div class="identidade">
+            <span class="logo">🧪</span>
+
+            <div class="informacoes-marca">
+                <h1>DILUTE LAB</h1>
+                <p>Calculadora de diluição</p>
+            </div>
+        </div>
+
+        <button class="modo-bancada" type="button">
+            Modo bancada
+        </button>
+    </header>
+
+    <!--Conteúdo principal-->
+    <main class="conteudo">
+
+        <!--Área de configuração da diluição-->
+        <section class="card preparo">
+
+            <div class="titulo-secao">
+                <span>01</span>
+
+                <div>
+                    <h2>Preparar diluição</h2>
+                    <p>Informe o volume final e o fator de diluição.</p>
+                </div>
+            </div>
+
+            <div class="campos">
+
+                <!--Volume final-->
+                <div class="campo">
+                    <label for="volume-final">
+                        Volume final
+                    </label>
+
+                    <select id="volume-final">
+                        <option value="0.5">0,5 ml</option>
+                        <option value="1">1,0 ml</option>
+                        <option value="custom">Outro</option>
+                    </select>
+                </div>
+
+                <!--Fator de diluição-->
+                <div class="campo">
+                    <label for="fator-diluicao">
+                        Fator de diluição
+                    </label>
+
+                    <select id="fator-diluicao">
+                        <option value="2">X2</option>
+                        <option value="3">X3</option>
+                        <option value="4">X4</option>
+                        <option value="5">X5</option>
+                        <option value="10">X10</option>
+                        <option value="20">X20</option>
+                        <option value="50">X50</option>
+                        <option value="100">X100</option>
+                        <option value="custom">Outro</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button class="botao-calcular" type="button">
+                Calcular diluição
+            </button>
+
+        </section>
+
+        <!--Resultado da calculadora-->
+        <section class="card resultado">
+
+            <div class="titulo-secao">
+                <span>02</span>
+
+                <div>
+                    <h2>Resultado</h2>
+                    <p>Volumes necessários para preparar a diluição.</p>
+                </div>
+            </div>
+
+            <div class="resultado-grid">
+
+                <div class="resultado-item">
+                    <span>Amostra</span>
+                    <strong id="resultado-amostra">—</strong>
+                </div>
+
+                <div class="resultado-item">
+                    <span>Solvente</span>
+                    <strong id="resultado-solvente">—</strong>
+                </div>
+
+                    <div class="resultado-item">
+                    <span>Volume final</span>
+                    <strong id="resultado-volume">—</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--Explicação visual do preparo-->
+        <section class="card como-preparar">
+
+            <div class="titulo-secao">
+                <span>03</span>
+
+                <div>
+                    <h2>Como preparar</h2>
+                    <p>Visualização da composição da diluição.</p>
+                </div>
+            </div>
+
+            <div class="fluxo-diluicao">
+
+                <div class="etapa">
+                    <span>Amostra</span>
+                    <strong>—</strong>
+                </div>
+
+                <span class="operador">+</span>
+
+                <div class="etapa">
+                    <span>Solvente</span>
+                    <strong>—</strong>
+                </div>
+
+                <span class="operador">→</span>
+
+                <div class="etapa final">
+                    <span>Diluição</span>
+                    <strong>—</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--Explicação matemática-->
+        <section class="card calculo">
+
+            <div class="titulo-secao">
+                <span>04</span>
+
+                <div>
+                    <h2>Cálculo</h2>
+                    <p>Entenda como chegamos ao resultado.</p>
+                </div>
+            </div>
+
+            <div class="explicacao-calculo">
+                Aguardando cálculo...
+            </div>
+
+        </section>
+
+        <!--Área de alerta-->
+        <div class="alerta" role="status">
+            <span>⚠</span>
+
+            <p>
+                Volumes muito pequenos podem exigir atenção na micropipeta/seringa.
+            </p>
+        </div>
+
+    </main>
+
+    <footer class="rodape">
+        <p>DILUTE LAB • Projeto de portfólio</p>
+    </footer>
+
+    <!--Javascript compilado pelo TypeScript será conectado aqui futuramente-->
+    <script type="module" src="./dist/main.js"></script>
+
+</body>
+
+</html>
